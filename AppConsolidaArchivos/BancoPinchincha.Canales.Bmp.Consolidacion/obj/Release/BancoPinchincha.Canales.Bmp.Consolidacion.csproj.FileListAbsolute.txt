@@ -1,0 +1,4 @@
+C:\Users\fredel507\Documents\Visual Studio 2010\Projects\AppConsolidaArchivos\BancoPinchincha.Canales.Bmp.Consolidacion\bin\Release\BancoPinchincha.Canales.Bmp.Consolidacion.dll
+C:\Users\fredel507\Documents\Visual Studio 2010\Projects\AppConsolidaArchivos\BancoPinchincha.Canales.Bmp.Consolidacion\bin\Release\BancoPinchincha.Canales.Bmp.Consolidacion.pdb
+C:\Users\fredel507\Documents\Visual Studio 2010\Projects\AppConsolidaArchivos\BancoPinchincha.Canales.Bmp.Consolidacion\obj\Release\BancoPinchincha.Canales.Bmp.Consolidacion.dll
+C:\Users\fredel507\Documents\Visual Studio 2010\Projects\AppConsolidaArchivos\BancoPinchincha.Canales.Bmp.Consolidacion\obj\Release\BancoPinchincha.Canales.Bmp.Consolidacion.pdb

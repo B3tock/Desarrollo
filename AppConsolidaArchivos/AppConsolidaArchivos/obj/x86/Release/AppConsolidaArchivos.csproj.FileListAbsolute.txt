@@ -1,0 +1,8 @@
+C:\Users\fredel507\Documents\Visual Studio 2010\Projects\AppConsolidaArchivos\AppConsolidaArchivos\bin\Release\AppConsolidaArchivos.exe.config
+C:\Users\fredel507\Documents\Visual Studio 2010\Projects\AppConsolidaArchivos\AppConsolidaArchivos\bin\Release\AppConsolidaArchivos.exe
+C:\Users\fredel507\Documents\Visual Studio 2010\Projects\AppConsolidaArchivos\AppConsolidaArchivos\bin\Release\AppConsolidaArchivos.pdb
+C:\Users\fredel507\Documents\Visual Studio 2010\Projects\AppConsolidaArchivos\AppConsolidaArchivos\bin\Release\BancoPinchincha.Canales.Bmp.Consolidacion.dll
+C:\Users\fredel507\Documents\Visual Studio 2010\Projects\AppConsolidaArchivos\AppConsolidaArchivos\bin\Release\BancoPinchincha.Canales.Bmp.Consolidacion.pdb
+C:\Users\fredel507\Documents\Visual Studio 2010\Projects\AppConsolidaArchivos\AppConsolidaArchivos\obj\x86\Release\AppConsolidaArchivos.csprojResolveAssemblyReference.cache
+C:\Users\fredel507\Documents\Visual Studio 2010\Projects\AppConsolidaArchivos\AppConsolidaArchivos\obj\x86\Release\AppConsolidaArchivos.exe
+C:\Users\fredel507\Documents\Visual Studio 2010\Projects\AppConsolidaArchivos\AppConsolidaArchivos\obj\x86\Release\AppConsolidaArchivos.pdb

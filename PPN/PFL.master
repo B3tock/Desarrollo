@@ -1,0 +1,45 @@
+﻿<%@ Master Language="VB" CodeFile="PFL.master.vb" Inherits="PFL" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+    <meta charset="utf-8"/> 
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1"/>
+    <title>Portafolio</title>
+   
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />    
+    <link href="bootstrap/dist/css/ClientU.min.css" rel="stylesheet" type="text/css" />    
+    <link href="bootstrap/dist/css/skins/_all-skins.min.css" rel="stylesheet" type="text/css" />
+
+    </head>
+
+<body class="login-page" style="background-color: white !important;">
+    <form id="form1" runat="server">
+     <div class="login-box">  
+       
+           <div class="box box-info">
+                <div class="box-header with-border" style="background-color: #FFDC00; text-align:center;">
+                    <img src="../images/LogoPichincha.png" />
+                </div>
+
+           <div class="form-border">
+                <br />     
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        
+                    </asp:ContentPlaceHolder>               
+
+                 </div>
+          </div>
+
+    </div> 
+    
+    <script src="../plugins/jQuery/jQuery-2.1.4.min.js"></script>
+    <script src="../bootstrap/js/bootstrap.min.js" type="text/javascript"></script>   
+    <script src="../bootstrap/dist/js/app.min.js" type="text/javascript"></script>   
+    <script src="../bootstrap/dist/js/pages/dashboard.js" type="text/javascript"></script>
+        
+ </form>
+  </body>
+       
+</html>

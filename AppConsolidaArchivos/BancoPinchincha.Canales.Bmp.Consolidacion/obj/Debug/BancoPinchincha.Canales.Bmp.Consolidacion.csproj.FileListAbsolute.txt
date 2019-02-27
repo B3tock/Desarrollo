@@ -1,0 +1,10 @@
+C:\_Practicas\Net\AppConsolidaArchivos\BancoPinchincha.Canales.Bmp.Consolidacion\bin\Debug\BancoPinchincha.Canales.Bmp.Consolidacion.dll
+C:\_Practicas\Net\AppConsolidaArchivos\BancoPinchincha.Canales.Bmp.Consolidacion\bin\Debug\BancoPinchincha.Canales.Bmp.Consolidacion.pdb
+C:\_Practicas\Net\AppConsolidaArchivos\BancoPinchincha.Canales.Bmp.Consolidacion\obj\Debug\BancoPinchincha.Canales.Bmp.Consolidacion.dll
+C:\_Practicas\Net\AppConsolidaArchivos\BancoPinchincha.Canales.Bmp.Consolidacion\obj\Debug\BancoPinchincha.Canales.Bmp.Consolidacion.pdb
+C:\_Practicas\Net\AppConsolidaArchivos\BancoPinchincha.Canales.Bmp.Consolidacion\obj\Debug\BancoPinchincha.Canales.Bmp.Consolidacion.csprojResolveAssemblyReference.cache
+C:\Users\fredel507\Documents\Visual Studio 2010\Projects\AppConsolidaArchivos\BancoPinchincha.Canales.Bmp.Consolidacion\bin\Debug\BancoPinchincha.Canales.Bmp.Consolidacion.dll
+C:\Users\fredel507\Documents\Visual Studio 2010\Projects\AppConsolidaArchivos\BancoPinchincha.Canales.Bmp.Consolidacion\bin\Debug\BancoPinchincha.Canales.Bmp.Consolidacion.pdb
+C:\Users\fredel507\Documents\Visual Studio 2010\Projects\AppConsolidaArchivos\BancoPinchincha.Canales.Bmp.Consolidacion\obj\Debug\BancoPinchincha.Canales.Bmp.Consolidacion.csprojResolveAssemblyReference.cache
+C:\Users\fredel507\Documents\Visual Studio 2010\Projects\AppConsolidaArchivos\BancoPinchincha.Canales.Bmp.Consolidacion\obj\Debug\BancoPinchincha.Canales.Bmp.Consolidacion.dll
+C:\Users\fredel507\Documents\Visual Studio 2010\Projects\AppConsolidaArchivos\BancoPinchincha.Canales.Bmp.Consolidacion\obj\Debug\BancoPinchincha.Canales.Bmp.Consolidacion.pdb

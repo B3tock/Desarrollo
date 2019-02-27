@@ -1,0 +1,16 @@
+D:\Proyectos WEB\Pichincha\Portafolio\Portafolio\Pichincha.Modelo\bin\Release\Pichincha.Modelo.dll
+D:\Proyectos WEB\Pichincha\Portafolio\Portafolio\Pichincha.Modelo\bin\Release\Pichincha.Modelo.pdb
+D:\Proyectos WEB\Pichincha\Portafolio\Portafolio\Pichincha.Modelo\bin\Release\Pichincha.Modelo.xml
+D:\Proyectos WEB\Pichincha\Portafolio\Portafolio\Pichincha.Modelo\obj\Release\Pichincha.Modelo.Resources.resources
+D:\Proyectos WEB\Pichincha\Portafolio\Portafolio\Pichincha.Modelo\obj\Release\Pichincha.Modelo.vbproj.GenerateResource.Cache
+D:\Proyectos WEB\Pichincha\Portafolio\Portafolio\Pichincha.Modelo\obj\Release\Pichincha.Modelo.dll
+D:\Proyectos WEB\Pichincha\Portafolio\Portafolio\Pichincha.Modelo\obj\Release\Pichincha.Modelo.xml
+D:\Proyectos WEB\Pichincha\Portafolio\Portafolio\Pichincha.Modelo\obj\Release\Pichincha.Modelo.pdb
+C:\Users\fredel507\Documents\Visual Studio 2012\Projects\Portafolio\Pichincha.Modelo\bin\Release\Pichincha.Modelo.dll
+C:\Users\fredel507\Documents\Visual Studio 2012\Projects\Portafolio\Pichincha.Modelo\bin\Release\Pichincha.Modelo.pdb
+C:\Users\fredel507\Documents\Visual Studio 2012\Projects\Portafolio\Pichincha.Modelo\bin\Release\Pichincha.Modelo.xml
+C:\Users\fredel507\Documents\Visual Studio 2012\Projects\Portafolio\Pichincha.Modelo\obj\Release\Pichincha.Modelo.Resources.resources
+C:\Users\fredel507\Documents\Visual Studio 2012\Projects\Portafolio\Pichincha.Modelo\obj\Release\Pichincha.Modelo.vbproj.GenerateResource.Cache
+C:\Users\fredel507\Documents\Visual Studio 2012\Projects\Portafolio\Pichincha.Modelo\obj\Release\Pichincha.Modelo.dll
+C:\Users\fredel507\Documents\Visual Studio 2012\Projects\Portafolio\Pichincha.Modelo\obj\Release\Pichincha.Modelo.xml
+C:\Users\fredel507\Documents\Visual Studio 2012\Projects\Portafolio\Pichincha.Modelo\obj\Release\Pichincha.Modelo.pdb

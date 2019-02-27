@@ -1,0 +1,556 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="web_pb_Transaccion">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="vl_sParametros" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="web_pb_TransaccionResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="web_pb_TransaccionResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="web_pb_ReloadXml">
+        <s:complexType />
+      </s:element>
+      <s:element name="web_pb_ReloadXmlResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="web_pb_ReloadXmlResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="web_pb_TransaccionTb">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="vl_sParametros" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="web_pb_TransaccionTbResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="web_pb_TransaccionTbResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="web_pb_TransaccionBatch">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="pi_sNombreArch" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pi_sUsuario" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pi_sOficina" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pi_sIDLINEA" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="web_pb_TransaccionBatchResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="web_pb_TransaccionBatchResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="web_pb_TransaccionTbFlow">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="vl_sParametros" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="web_pb_TransaccionTbFlowResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="web_pb_TransaccionTbFlowResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="web_pb_Trans">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="vl_sParametros" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="web_pb_TransResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="web_pb_TransResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="web_pb_TransaccionSoapIn">
+    <wsdl:part name="parameters" element="tns:web_pb_Transaccion" />
+  </wsdl:message>
+  <wsdl:message name="web_pb_TransaccionSoapOut">
+    <wsdl:part name="parameters" element="tns:web_pb_TransaccionResponse" />
+  </wsdl:message>
+  <wsdl:message name="web_pb_ReloadXmlSoapIn">
+    <wsdl:part name="parameters" element="tns:web_pb_ReloadXml" />
+  </wsdl:message>
+  <wsdl:message name="web_pb_ReloadXmlSoapOut">
+    <wsdl:part name="parameters" element="tns:web_pb_ReloadXmlResponse" />
+  </wsdl:message>
+  <wsdl:message name="web_pb_TransaccionTbSoapIn">
+    <wsdl:part name="parameters" element="tns:web_pb_TransaccionTb" />
+  </wsdl:message>
+  <wsdl:message name="web_pb_TransaccionTbSoapOut">
+    <wsdl:part name="parameters" element="tns:web_pb_TransaccionTbResponse" />
+  </wsdl:message>
+  <wsdl:message name="web_pb_TransaccionBatchSoapIn">
+    <wsdl:part name="parameters" element="tns:web_pb_TransaccionBatch" />
+  </wsdl:message>
+  <wsdl:message name="web_pb_TransaccionBatchSoapOut">
+    <wsdl:part name="parameters" element="tns:web_pb_TransaccionBatchResponse" />
+  </wsdl:message>
+  <wsdl:message name="web_pb_TransaccionTbFlowSoapIn">
+    <wsdl:part name="parameters" element="tns:web_pb_TransaccionTbFlow" />
+  </wsdl:message>
+  <wsdl:message name="web_pb_TransaccionTbFlowSoapOut">
+    <wsdl:part name="parameters" element="tns:web_pb_TransaccionTbFlowResponse" />
+  </wsdl:message>
+  <wsdl:message name="web_pb_TransSoapIn">
+    <wsdl:part name="parameters" element="tns:web_pb_Trans" />
+  </wsdl:message>
+  <wsdl:message name="web_pb_TransSoapOut">
+    <wsdl:part name="parameters" element="tns:web_pb_TransResponse" />
+  </wsdl:message>
+  <wsdl:message name="web_pb_TransaccionHttpGetIn">
+    <wsdl:part name="vl_sParametros" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="web_pb_TransaccionHttpGetOut">
+    <wsdl:part name="Body" />
+  </wsdl:message>
+  <wsdl:message name="web_pb_ReloadXmlHttpGetIn" />
+  <wsdl:message name="web_pb_ReloadXmlHttpGetOut">
+    <wsdl:part name="Body" />
+  </wsdl:message>
+  <wsdl:message name="web_pb_TransaccionTbHttpGetIn">
+    <wsdl:part name="vl_sParametros" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="web_pb_TransaccionTbHttpGetOut">
+    <wsdl:part name="Body" />
+  </wsdl:message>
+  <wsdl:message name="web_pb_TransaccionBatchHttpGetIn">
+    <wsdl:part name="pi_sNombreArch" type="s:string" />
+    <wsdl:part name="pi_sUsuario" type="s:string" />
+    <wsdl:part name="pi_sOficina" type="s:string" />
+    <wsdl:part name="pi_sIDLINEA" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="web_pb_TransaccionBatchHttpGetOut">
+    <wsdl:part name="Body" />
+  </wsdl:message>
+  <wsdl:message name="web_pb_TransaccionTbFlowHttpGetIn">
+    <wsdl:part name="vl_sParametros" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="web_pb_TransaccionTbFlowHttpGetOut">
+    <wsdl:part name="Body" />
+  </wsdl:message>
+  <wsdl:message name="web_pb_TransHttpGetIn">
+    <wsdl:part name="vl_sParametros" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="web_pb_TransHttpGetOut">
+    <wsdl:part name="Body" />
+  </wsdl:message>
+  <wsdl:message name="web_pb_TransaccionHttpPostIn">
+    <wsdl:part name="vl_sParametros" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="web_pb_TransaccionHttpPostOut">
+    <wsdl:part name="Body" />
+  </wsdl:message>
+  <wsdl:message name="web_pb_ReloadXmlHttpPostIn" />
+  <wsdl:message name="web_pb_ReloadXmlHttpPostOut">
+    <wsdl:part name="Body" />
+  </wsdl:message>
+  <wsdl:message name="web_pb_TransaccionTbHttpPostIn">
+    <wsdl:part name="vl_sParametros" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="web_pb_TransaccionTbHttpPostOut">
+    <wsdl:part name="Body" />
+  </wsdl:message>
+  <wsdl:message name="web_pb_TransaccionBatchHttpPostIn">
+    <wsdl:part name="pi_sNombreArch" type="s:string" />
+    <wsdl:part name="pi_sUsuario" type="s:string" />
+    <wsdl:part name="pi_sOficina" type="s:string" />
+    <wsdl:part name="pi_sIDLINEA" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="web_pb_TransaccionBatchHttpPostOut">
+    <wsdl:part name="Body" />
+  </wsdl:message>
+  <wsdl:message name="web_pb_TransaccionTbFlowHttpPostIn">
+    <wsdl:part name="vl_sParametros" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="web_pb_TransaccionTbFlowHttpPostOut">
+    <wsdl:part name="Body" />
+  </wsdl:message>
+  <wsdl:message name="web_pb_TransHttpPostIn">
+    <wsdl:part name="vl_sParametros" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="web_pb_TransHttpPostOut">
+    <wsdl:part name="Body" />
+  </wsdl:message>
+  <wsdl:portType name="ws_RadicacionSoap">
+    <wsdl:operation name="web_pb_Transaccion">
+      <wsdl:input message="tns:web_pb_TransaccionSoapIn" />
+      <wsdl:output message="tns:web_pb_TransaccionSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="web_pb_ReloadXml">
+      <wsdl:input message="tns:web_pb_ReloadXmlSoapIn" />
+      <wsdl:output message="tns:web_pb_ReloadXmlSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="web_pb_TransaccionTb">
+      <wsdl:input message="tns:web_pb_TransaccionTbSoapIn" />
+      <wsdl:output message="tns:web_pb_TransaccionTbSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="web_pb_TransaccionBatch">
+      <wsdl:input message="tns:web_pb_TransaccionBatchSoapIn" />
+      <wsdl:output message="tns:web_pb_TransaccionBatchSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="web_pb_TransaccionTbFlow">
+      <wsdl:input message="tns:web_pb_TransaccionTbFlowSoapIn" />
+      <wsdl:output message="tns:web_pb_TransaccionTbFlowSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="web_pb_Trans">
+      <wsdl:input message="tns:web_pb_TransSoapIn" />
+      <wsdl:output message="tns:web_pb_TransSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="ws_RadicacionHttpGet">
+    <wsdl:operation name="web_pb_Transaccion">
+      <wsdl:input message="tns:web_pb_TransaccionHttpGetIn" />
+      <wsdl:output message="tns:web_pb_TransaccionHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="web_pb_ReloadXml">
+      <wsdl:input message="tns:web_pb_ReloadXmlHttpGetIn" />
+      <wsdl:output message="tns:web_pb_ReloadXmlHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="web_pb_TransaccionTb">
+      <wsdl:input message="tns:web_pb_TransaccionTbHttpGetIn" />
+      <wsdl:output message="tns:web_pb_TransaccionTbHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="web_pb_TransaccionBatch">
+      <wsdl:input message="tns:web_pb_TransaccionBatchHttpGetIn" />
+      <wsdl:output message="tns:web_pb_TransaccionBatchHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="web_pb_TransaccionTbFlow">
+      <wsdl:input message="tns:web_pb_TransaccionTbFlowHttpGetIn" />
+      <wsdl:output message="tns:web_pb_TransaccionTbFlowHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="web_pb_Trans">
+      <wsdl:input message="tns:web_pb_TransHttpGetIn" />
+      <wsdl:output message="tns:web_pb_TransHttpGetOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="ws_RadicacionHttpPost">
+    <wsdl:operation name="web_pb_Transaccion">
+      <wsdl:input message="tns:web_pb_TransaccionHttpPostIn" />
+      <wsdl:output message="tns:web_pb_TransaccionHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="web_pb_ReloadXml">
+      <wsdl:input message="tns:web_pb_ReloadXmlHttpPostIn" />
+      <wsdl:output message="tns:web_pb_ReloadXmlHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="web_pb_TransaccionTb">
+      <wsdl:input message="tns:web_pb_TransaccionTbHttpPostIn" />
+      <wsdl:output message="tns:web_pb_TransaccionTbHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="web_pb_TransaccionBatch">
+      <wsdl:input message="tns:web_pb_TransaccionBatchHttpPostIn" />
+      <wsdl:output message="tns:web_pb_TransaccionBatchHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="web_pb_TransaccionTbFlow">
+      <wsdl:input message="tns:web_pb_TransaccionTbFlowHttpPostIn" />
+      <wsdl:output message="tns:web_pb_TransaccionTbFlowHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="web_pb_Trans">
+      <wsdl:input message="tns:web_pb_TransHttpPostIn" />
+      <wsdl:output message="tns:web_pb_TransHttpPostOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="ws_RadicacionSoap" type="tns:ws_RadicacionSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="web_pb_Transaccion">
+      <soap:operation soapAction="http://tempuri.org/web_pb_Transaccion" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="web_pb_ReloadXml">
+      <soap:operation soapAction="http://tempuri.org/web_pb_ReloadXml" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="web_pb_TransaccionTb">
+      <soap:operation soapAction="http://tempuri.org/web_pb_TransaccionTb" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="web_pb_TransaccionBatch">
+      <soap:operation soapAction="http://tempuri.org/web_pb_TransaccionBatch" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="web_pb_TransaccionTbFlow">
+      <soap:operation soapAction="http://tempuri.org/web_pb_TransaccionTbFlow" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="web_pb_Trans">
+      <soap:operation soapAction="http://tempuri.org/web_pb_Trans" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="ws_RadicacionSoap12" type="tns:ws_RadicacionSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="web_pb_Transaccion">
+      <soap12:operation soapAction="http://tempuri.org/web_pb_Transaccion" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="web_pb_ReloadXml">
+      <soap12:operation soapAction="http://tempuri.org/web_pb_ReloadXml" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="web_pb_TransaccionTb">
+      <soap12:operation soapAction="http://tempuri.org/web_pb_TransaccionTb" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="web_pb_TransaccionBatch">
+      <soap12:operation soapAction="http://tempuri.org/web_pb_TransaccionBatch" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="web_pb_TransaccionTbFlow">
+      <soap12:operation soapAction="http://tempuri.org/web_pb_TransaccionTbFlow" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="web_pb_Trans">
+      <soap12:operation soapAction="http://tempuri.org/web_pb_Trans" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="ws_RadicacionHttpGet" type="tns:ws_RadicacionHttpGet">
+    <http:binding verb="GET" />
+    <wsdl:operation name="web_pb_Transaccion">
+      <http:operation location="/web_pb_Transaccion" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="Body" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="web_pb_ReloadXml">
+      <http:operation location="/web_pb_ReloadXml" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="Body" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="web_pb_TransaccionTb">
+      <http:operation location="/web_pb_TransaccionTb" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="Body" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="web_pb_TransaccionBatch">
+      <http:operation location="/web_pb_TransaccionBatch" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="Body" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="web_pb_TransaccionTbFlow">
+      <http:operation location="/web_pb_TransaccionTbFlow" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="Body" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="web_pb_Trans">
+      <http:operation location="/web_pb_Trans" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="Body" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="ws_RadicacionHttpPost" type="tns:ws_RadicacionHttpPost">
+    <http:binding verb="POST" />
+    <wsdl:operation name="web_pb_Transaccion">
+      <http:operation location="/web_pb_Transaccion" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="Body" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="web_pb_ReloadXml">
+      <http:operation location="/web_pb_ReloadXml" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="Body" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="web_pb_TransaccionTb">
+      <http:operation location="/web_pb_TransaccionTb" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="Body" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="web_pb_TransaccionBatch">
+      <http:operation location="/web_pb_TransaccionBatch" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="Body" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="web_pb_TransaccionTbFlow">
+      <http:operation location="/web_pb_TransaccionTbFlow" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="Body" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="web_pb_Trans">
+      <http:operation location="/web_pb_Trans" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="Body" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ws_Radicacion">
+    <wsdl:port name="ws_RadicacionSoap" binding="tns:ws_RadicacionSoap">
+      <soap:address location="http://190.66.3.135/bankvision_ws_rd/ws_Radicacion.asmx" />
+    </wsdl:port>
+    <wsdl:port name="ws_RadicacionSoap12" binding="tns:ws_RadicacionSoap12">
+      <soap12:address location="http://190.66.3.135/bankvision_ws_rd/ws_Radicacion.asmx" />
+    </wsdl:port>
+    <wsdl:port name="ws_RadicacionHttpGet" binding="tns:ws_RadicacionHttpGet">
+      <http:address location="http://190.66.3.135/bankvision_ws_rd/ws_Radicacion.asmx" />
+    </wsdl:port>
+    <wsdl:port name="ws_RadicacionHttpPost" binding="tns:ws_RadicacionHttpPost">
+      <http:address location="http://190.66.3.135/bankvision_ws_rd/ws_Radicacion.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

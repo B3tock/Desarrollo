@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="ConsultaGenerica">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="Idmetodo" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="Campos" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Tablas" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Union" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Condiciones" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ConsultaGenericaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ConsultaGenericaResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="ConsultaGenericaSoapIn">
+    <wsdl:part name="parameters" element="tns:ConsultaGenerica" />
+  </wsdl:message>
+  <wsdl:message name="ConsultaGenericaSoapOut">
+    <wsdl:part name="parameters" element="tns:ConsultaGenericaResponse" />
+  </wsdl:message>
+  <wsdl:portType name="WSConsultaGenericaSoap">
+    <wsdl:operation name="ConsultaGenerica">
+      <wsdl:input message="tns:ConsultaGenericaSoapIn" />
+      <wsdl:output message="tns:ConsultaGenericaSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="WSConsultaGenericaSoap" type="tns:WSConsultaGenericaSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="ConsultaGenerica">
+      <soap:operation soapAction="http://tempuri.org/ConsultaGenerica" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="WSConsultaGenericaSoap12" type="tns:WSConsultaGenericaSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="ConsultaGenerica">
+      <soap12:operation soapAction="http://tempuri.org/ConsultaGenerica" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="WSConsultaGenerica">
+    <wsdl:port name="WSConsultaGenericaSoap" binding="tns:WSConsultaGenericaSoap">
+      <soap:address location="http://localhost:8092/WSConsultaGenerica.asmx" />
+    </wsdl:port>
+    <wsdl:port name="WSConsultaGenericaSoap12" binding="tns:WSConsultaGenericaSoap12">
+      <soap12:address location="http://localhost:8092/WSConsultaGenerica.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

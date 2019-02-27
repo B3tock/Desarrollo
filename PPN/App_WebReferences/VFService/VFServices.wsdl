@@ -1,0 +1,2360 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="GenerateBalance">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="customerKey" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="currentUser" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="log" type="s:boolean" />
+            <s:element minOccurs="1" maxOccurs="1" name="form" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="stage" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GenerateBalanceResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GenerateBalanceResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GenerateGlobalBalance">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="currentUser" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="key" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="log" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="sql" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GenerateGlobalBalanceResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GenerateGlobalBalanceResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetChargeOnDemand">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="currentUser" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetChargeOnDemandResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="GetChargeOnDemandResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetLastStatus">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="form" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetLastStatusResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetLastStatusResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetAssignUsers">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="status" />
+            <s:element minOccurs="0" maxOccurs="1" name="form" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetAssignUsersResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetAssignUsersResult" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetBalancedUser">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="users" />
+            <s:element minOccurs="0" maxOccurs="1" name="stage" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetBalancedUserResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetBalancedUserResult" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AssignUser">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="currentUser" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="form" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="user" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="app" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="stage" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AssignUserResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="AssignUserResult" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Encode">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="value" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EncodeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="EncodeResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Decode">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="value" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DecodeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="DecodeResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="FormGroup">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="key" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="idFormGroup" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="log" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="FormGroupResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="FormGroupResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="FormGroupMS">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="key" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="idFormGroup" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="log" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="FormGroupMSResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="FormGroupMSResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AcceptStatus">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="key" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="log" type="s:boolean" />
+            <s:element minOccurs="1" maxOccurs="1" name="idStatus" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="forced" type="s:boolean" />
+            <s:element minOccurs="1" maxOccurs="1" name="reprocess" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="comments" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="user" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AcceptStatusResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="AcceptStatusResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AssignDataKey">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="key" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AssignDataKeyResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="AssignDataKeyResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CalculatedFields">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="customerKey" type="s:double" />
+            <s:element minOccurs="1" maxOccurs="1" name="log" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="processType" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CalculatedFieldsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="CalculatedFieldsResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CalculatedFieldsByCode">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="customerKey" type="s:double" />
+            <s:element minOccurs="1" maxOccurs="1" name="log" type="s:boolean" />
+            <s:element minOccurs="1" maxOccurs="1" name="statusCode" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="fieldCode" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CalculatedFieldsByCodeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="CalculatedFieldsByCodeResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AssignedFields">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="customerKey" type="s:double" />
+            <s:element minOccurs="1" maxOccurs="1" name="log" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AssignedFieldsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="AssignedFieldsResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AssignedFieldsByCode">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="customerKey" type="s:double" />
+            <s:element minOccurs="1" maxOccurs="1" name="log" type="s:boolean" />
+            <s:element minOccurs="1" maxOccurs="1" name="statusCode" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="fieldCode" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AssignedFieldsByCodeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="AssignedFieldsByCodeResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="MultipleSending">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="key" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ASProgram" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ASLibrary" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="user" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="log" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="MultipleSendingResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="MultipleSendingResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InterfaceSelector">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="user" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="fieldType" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="dataKey" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="interfaceKey" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="log" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InterfaceSelectorResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="InterfaceSelectorResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InterfaceSelectorWeb">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="user" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="fieldType" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="interfaceKey" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="formParameters" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InterfaceSelectorWebResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="InterfaceSelectorWebResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SendTriggerProcess">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="customerId" type="s:double" />
+            <s:element minOccurs="1" maxOccurs="1" name="userId" type="s:double" />
+            <s:element minOccurs="0" maxOccurs="1" name="overrideGroups" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="mode" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="language" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SendTriggerProcessResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SendTriggerProcessResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SendTriggerProcessSec">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="customerId" type="s:double" />
+            <s:element minOccurs="1" maxOccurs="1" name="userId" type="s:double" />
+            <s:element minOccurs="0" maxOccurs="1" name="overrideGroups" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="mode" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="language" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SendTriggerProcessSecResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SendTriggerProcessSecResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ProcesarTrama">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="trama" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ProcesarTramaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ProcesarTramaResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Combine">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="cnx" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="form" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Solicitud" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="user" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="lang" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="template" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="seguro" type="s:short" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CombineResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="CombineResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="applyFormat">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="fecha" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Formato" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="applyFormatResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="applyFormatResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ConvierteNumLetra">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Numero" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Formato" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ConvierteNumLetraResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ConvierteNumLetraResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="fAutomaticGeneration">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="cnx" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="form" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Solicitud" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="user" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="lang" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="template" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="seguro" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="fAutomaticGenerationResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="fAutomaticGenerationResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Decripta">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CadenaEnc" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DecriptaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="DecriptaResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="string" nillable="true" type="s:string" />
+      <s:element name="int" type="s:int" />
+      <s:element name="anyType" nillable="true" />
+      <s:element name="boolean" type="s:boolean" />
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="GenerateBalanceSoapIn">
+    <wsdl:part name="parameters" element="tns:GenerateBalance" />
+  </wsdl:message>
+  <wsdl:message name="GenerateBalanceSoapOut">
+    <wsdl:part name="parameters" element="tns:GenerateBalanceResponse" />
+  </wsdl:message>
+  <wsdl:message name="GenerateGlobalBalanceSoapIn">
+    <wsdl:part name="parameters" element="tns:GenerateGlobalBalance" />
+  </wsdl:message>
+  <wsdl:message name="GenerateGlobalBalanceSoapOut">
+    <wsdl:part name="parameters" element="tns:GenerateGlobalBalanceResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetChargeOnDemandSoapIn">
+    <wsdl:part name="parameters" element="tns:GetChargeOnDemand" />
+  </wsdl:message>
+  <wsdl:message name="GetChargeOnDemandSoapOut">
+    <wsdl:part name="parameters" element="tns:GetChargeOnDemandResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetLastStatusSoapIn">
+    <wsdl:part name="parameters" element="tns:GetLastStatus" />
+  </wsdl:message>
+  <wsdl:message name="GetLastStatusSoapOut">
+    <wsdl:part name="parameters" element="tns:GetLastStatusResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetAssignUsersSoapIn">
+    <wsdl:part name="parameters" element="tns:GetAssignUsers" />
+  </wsdl:message>
+  <wsdl:message name="GetAssignUsersSoapOut">
+    <wsdl:part name="parameters" element="tns:GetAssignUsersResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetBalancedUserSoapIn">
+    <wsdl:part name="parameters" element="tns:GetBalancedUser" />
+  </wsdl:message>
+  <wsdl:message name="GetBalancedUserSoapOut">
+    <wsdl:part name="parameters" element="tns:GetBalancedUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="AssignUserSoapIn">
+    <wsdl:part name="parameters" element="tns:AssignUser" />
+  </wsdl:message>
+  <wsdl:message name="AssignUserSoapOut">
+    <wsdl:part name="parameters" element="tns:AssignUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="EncodeSoapIn">
+    <wsdl:part name="parameters" element="tns:Encode" />
+  </wsdl:message>
+  <wsdl:message name="EncodeSoapOut">
+    <wsdl:part name="parameters" element="tns:EncodeResponse" />
+  </wsdl:message>
+  <wsdl:message name="DecodeSoapIn">
+    <wsdl:part name="parameters" element="tns:Decode" />
+  </wsdl:message>
+  <wsdl:message name="DecodeSoapOut">
+    <wsdl:part name="parameters" element="tns:DecodeResponse" />
+  </wsdl:message>
+  <wsdl:message name="FormGroupSoapIn">
+    <wsdl:part name="parameters" element="tns:FormGroup" />
+  </wsdl:message>
+  <wsdl:message name="FormGroupSoapOut">
+    <wsdl:part name="parameters" element="tns:FormGroupResponse" />
+  </wsdl:message>
+  <wsdl:message name="FormGroupMSSoapIn">
+    <wsdl:part name="parameters" element="tns:FormGroupMS" />
+  </wsdl:message>
+  <wsdl:message name="FormGroupMSSoapOut">
+    <wsdl:part name="parameters" element="tns:FormGroupMSResponse" />
+  </wsdl:message>
+  <wsdl:message name="AcceptStatusSoapIn">
+    <wsdl:part name="parameters" element="tns:AcceptStatus" />
+  </wsdl:message>
+  <wsdl:message name="AcceptStatusSoapOut">
+    <wsdl:part name="parameters" element="tns:AcceptStatusResponse" />
+  </wsdl:message>
+  <wsdl:message name="AssignDataKeySoapIn">
+    <wsdl:part name="parameters" element="tns:AssignDataKey" />
+  </wsdl:message>
+  <wsdl:message name="AssignDataKeySoapOut">
+    <wsdl:part name="parameters" element="tns:AssignDataKeyResponse" />
+  </wsdl:message>
+  <wsdl:message name="CalculatedFieldsSoapIn">
+    <wsdl:part name="parameters" element="tns:CalculatedFields" />
+  </wsdl:message>
+  <wsdl:message name="CalculatedFieldsSoapOut">
+    <wsdl:part name="parameters" element="tns:CalculatedFieldsResponse" />
+  </wsdl:message>
+  <wsdl:message name="CalculatedFieldsByCodeSoapIn">
+    <wsdl:part name="parameters" element="tns:CalculatedFieldsByCode" />
+  </wsdl:message>
+  <wsdl:message name="CalculatedFieldsByCodeSoapOut">
+    <wsdl:part name="parameters" element="tns:CalculatedFieldsByCodeResponse" />
+  </wsdl:message>
+  <wsdl:message name="AssignedFieldsSoapIn">
+    <wsdl:part name="parameters" element="tns:AssignedFields" />
+  </wsdl:message>
+  <wsdl:message name="AssignedFieldsSoapOut">
+    <wsdl:part name="parameters" element="tns:AssignedFieldsResponse" />
+  </wsdl:message>
+  <wsdl:message name="AssignedFieldsByCodeSoapIn">
+    <wsdl:part name="parameters" element="tns:AssignedFieldsByCode" />
+  </wsdl:message>
+  <wsdl:message name="AssignedFieldsByCodeSoapOut">
+    <wsdl:part name="parameters" element="tns:AssignedFieldsByCodeResponse" />
+  </wsdl:message>
+  <wsdl:message name="MultipleSendingSoapIn">
+    <wsdl:part name="parameters" element="tns:MultipleSending" />
+  </wsdl:message>
+  <wsdl:message name="MultipleSendingSoapOut">
+    <wsdl:part name="parameters" element="tns:MultipleSendingResponse" />
+  </wsdl:message>
+  <wsdl:message name="InterfaceSelectorSoapIn">
+    <wsdl:part name="parameters" element="tns:InterfaceSelector" />
+  </wsdl:message>
+  <wsdl:message name="InterfaceSelectorSoapOut">
+    <wsdl:part name="parameters" element="tns:InterfaceSelectorResponse" />
+  </wsdl:message>
+  <wsdl:message name="InterfaceSelectorWebSoapIn">
+    <wsdl:part name="parameters" element="tns:InterfaceSelectorWeb" />
+  </wsdl:message>
+  <wsdl:message name="InterfaceSelectorWebSoapOut">
+    <wsdl:part name="parameters" element="tns:InterfaceSelectorWebResponse" />
+  </wsdl:message>
+  <wsdl:message name="SendTriggerProcessSoapIn">
+    <wsdl:part name="parameters" element="tns:SendTriggerProcess" />
+  </wsdl:message>
+  <wsdl:message name="SendTriggerProcessSoapOut">
+    <wsdl:part name="parameters" element="tns:SendTriggerProcessResponse" />
+  </wsdl:message>
+  <wsdl:message name="SendTriggerProcessSecSoapIn">
+    <wsdl:part name="parameters" element="tns:SendTriggerProcessSec" />
+  </wsdl:message>
+  <wsdl:message name="SendTriggerProcessSecSoapOut">
+    <wsdl:part name="parameters" element="tns:SendTriggerProcessSecResponse" />
+  </wsdl:message>
+  <wsdl:message name="ProcesarTramaSoapIn">
+    <wsdl:part name="parameters" element="tns:ProcesarTrama" />
+  </wsdl:message>
+  <wsdl:message name="ProcesarTramaSoapOut">
+    <wsdl:part name="parameters" element="tns:ProcesarTramaResponse" />
+  </wsdl:message>
+  <wsdl:message name="CombineSoapIn">
+    <wsdl:part name="parameters" element="tns:Combine" />
+  </wsdl:message>
+  <wsdl:message name="CombineSoapOut">
+    <wsdl:part name="parameters" element="tns:CombineResponse" />
+  </wsdl:message>
+  <wsdl:message name="applyFormatSoapIn">
+    <wsdl:part name="parameters" element="tns:applyFormat" />
+  </wsdl:message>
+  <wsdl:message name="applyFormatSoapOut">
+    <wsdl:part name="parameters" element="tns:applyFormatResponse" />
+  </wsdl:message>
+  <wsdl:message name="ConvierteNumLetraSoapIn">
+    <wsdl:part name="parameters" element="tns:ConvierteNumLetra" />
+  </wsdl:message>
+  <wsdl:message name="ConvierteNumLetraSoapOut">
+    <wsdl:part name="parameters" element="tns:ConvierteNumLetraResponse" />
+  </wsdl:message>
+  <wsdl:message name="fAutomaticGenerationSoapIn">
+    <wsdl:part name="parameters" element="tns:fAutomaticGeneration" />
+  </wsdl:message>
+  <wsdl:message name="fAutomaticGenerationSoapOut">
+    <wsdl:part name="parameters" element="tns:fAutomaticGenerationResponse" />
+  </wsdl:message>
+  <wsdl:message name="DecriptaSoapIn">
+    <wsdl:part name="parameters" element="tns:Decripta" />
+  </wsdl:message>
+  <wsdl:message name="DecriptaSoapOut">
+    <wsdl:part name="parameters" element="tns:DecriptaResponse" />
+  </wsdl:message>
+  <wsdl:message name="GenerateBalanceHttpGetIn">
+    <wsdl:part name="customerKey" type="s:string" />
+    <wsdl:part name="currentUser" type="s:string" />
+    <wsdl:part name="log" type="s:string" />
+    <wsdl:part name="form" type="s:string" />
+    <wsdl:part name="stage" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GenerateBalanceHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GenerateGlobalBalanceHttpGetIn">
+    <wsdl:part name="currentUser" type="s:string" />
+    <wsdl:part name="key" type="s:string" />
+    <wsdl:part name="log" type="s:string" />
+    <wsdl:part name="sql" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GenerateGlobalBalanceHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetChargeOnDemandHttpGetIn">
+    <wsdl:part name="currentUser" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetChargeOnDemandHttpGetOut">
+    <wsdl:part name="Body" element="tns:int" />
+  </wsdl:message>
+  <wsdl:message name="AssignUserHttpGetIn">
+    <wsdl:part name="currentUser" type="s:string" />
+    <wsdl:part name="form" type="s:string" />
+    <wsdl:part name="user" type="s:string" />
+    <wsdl:part name="app" type="s:string" />
+    <wsdl:part name="stage" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="AssignUserHttpGetOut">
+    <wsdl:part name="Body" element="tns:anyType" />
+  </wsdl:message>
+  <wsdl:message name="EncodeHttpGetIn">
+    <wsdl:part name="value" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="EncodeHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="DecodeHttpGetIn">
+    <wsdl:part name="value" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="DecodeHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="FormGroupHttpGetIn">
+    <wsdl:part name="key" type="s:string" />
+    <wsdl:part name="idFormGroup" type="s:string" />
+    <wsdl:part name="log" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="FormGroupHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="FormGroupMSHttpGetIn">
+    <wsdl:part name="key" type="s:string" />
+    <wsdl:part name="idFormGroup" type="s:string" />
+    <wsdl:part name="log" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="FormGroupMSHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="AcceptStatusHttpGetIn">
+    <wsdl:part name="key" type="s:string" />
+    <wsdl:part name="log" type="s:string" />
+    <wsdl:part name="idStatus" type="s:string" />
+    <wsdl:part name="forced" type="s:string" />
+    <wsdl:part name="reprocess" type="s:string" />
+    <wsdl:part name="comments" type="s:string" />
+    <wsdl:part name="user" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="AcceptStatusHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="AssignDataKeyHttpGetIn">
+    <wsdl:part name="key" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="AssignDataKeyHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="CalculatedFieldsHttpGetIn">
+    <wsdl:part name="customerKey" type="s:string" />
+    <wsdl:part name="log" type="s:string" />
+    <wsdl:part name="processType" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="CalculatedFieldsHttpGetOut">
+    <wsdl:part name="Body" element="tns:boolean" />
+  </wsdl:message>
+  <wsdl:message name="CalculatedFieldsByCodeHttpGetIn">
+    <wsdl:part name="customerKey" type="s:string" />
+    <wsdl:part name="log" type="s:string" />
+    <wsdl:part name="statusCode" type="s:string" />
+    <wsdl:part name="fieldCode" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="CalculatedFieldsByCodeHttpGetOut">
+    <wsdl:part name="Body" element="tns:boolean" />
+  </wsdl:message>
+  <wsdl:message name="AssignedFieldsHttpGetIn">
+    <wsdl:part name="customerKey" type="s:string" />
+    <wsdl:part name="log" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="AssignedFieldsHttpGetOut">
+    <wsdl:part name="Body" element="tns:boolean" />
+  </wsdl:message>
+  <wsdl:message name="AssignedFieldsByCodeHttpGetIn">
+    <wsdl:part name="customerKey" type="s:string" />
+    <wsdl:part name="log" type="s:string" />
+    <wsdl:part name="statusCode" type="s:string" />
+    <wsdl:part name="fieldCode" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="AssignedFieldsByCodeHttpGetOut">
+    <wsdl:part name="Body" element="tns:boolean" />
+  </wsdl:message>
+  <wsdl:message name="MultipleSendingHttpGetIn">
+    <wsdl:part name="key" type="s:string" />
+    <wsdl:part name="ASProgram" type="s:string" />
+    <wsdl:part name="ASLibrary" type="s:string" />
+    <wsdl:part name="user" type="s:string" />
+    <wsdl:part name="log" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="MultipleSendingHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="InterfaceSelectorHttpGetIn">
+    <wsdl:part name="user" type="s:string" />
+    <wsdl:part name="fieldType" type="s:string" />
+    <wsdl:part name="dataKey" type="s:string" />
+    <wsdl:part name="interfaceKey" type="s:string" />
+    <wsdl:part name="log" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="InterfaceSelectorHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="InterfaceSelectorWebHttpGetIn">
+    <wsdl:part name="user" type="s:string" />
+    <wsdl:part name="fieldType" type="s:string" />
+    <wsdl:part name="interfaceKey" type="s:string" />
+    <wsdl:part name="formParameters" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="InterfaceSelectorWebHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="SendTriggerProcessHttpGetIn">
+    <wsdl:part name="customerId" type="s:string" />
+    <wsdl:part name="userId" type="s:string" />
+    <wsdl:part name="overrideGroups" type="s:string" />
+    <wsdl:part name="mode" type="s:string" />
+    <wsdl:part name="language" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="SendTriggerProcessHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="SendTriggerProcessSecHttpGetIn">
+    <wsdl:part name="customerId" type="s:string" />
+    <wsdl:part name="userId" type="s:string" />
+    <wsdl:part name="overrideGroups" type="s:string" />
+    <wsdl:part name="mode" type="s:string" />
+    <wsdl:part name="language" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="SendTriggerProcessSecHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="ProcesarTramaHttpGetIn">
+    <wsdl:part name="trama" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ProcesarTramaHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="CombineHttpGetIn">
+    <wsdl:part name="cnx" type="s:string" />
+    <wsdl:part name="form" type="s:string" />
+    <wsdl:part name="Solicitud" type="s:string" />
+    <wsdl:part name="user" type="s:string" />
+    <wsdl:part name="lang" type="s:string" />
+    <wsdl:part name="template" type="s:string" />
+    <wsdl:part name="seguro" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="CombineHttpGetOut">
+    <wsdl:part name="Body" element="tns:boolean" />
+  </wsdl:message>
+  <wsdl:message name="applyFormatHttpGetIn">
+    <wsdl:part name="fecha" type="s:string" />
+    <wsdl:part name="Formato" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="applyFormatHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="ConvierteNumLetraHttpGetIn">
+    <wsdl:part name="Numero" type="s:string" />
+    <wsdl:part name="Formato" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ConvierteNumLetraHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="fAutomaticGenerationHttpGetIn">
+    <wsdl:part name="cnx" type="s:string" />
+    <wsdl:part name="form" type="s:string" />
+    <wsdl:part name="Solicitud" type="s:string" />
+    <wsdl:part name="user" type="s:string" />
+    <wsdl:part name="lang" type="s:string" />
+    <wsdl:part name="template" type="s:string" />
+    <wsdl:part name="seguro" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="fAutomaticGenerationHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="DecriptaHttpGetIn">
+    <wsdl:part name="CadenaEnc" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="DecriptaHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GenerateBalanceHttpPostIn">
+    <wsdl:part name="customerKey" type="s:string" />
+    <wsdl:part name="currentUser" type="s:string" />
+    <wsdl:part name="log" type="s:string" />
+    <wsdl:part name="form" type="s:string" />
+    <wsdl:part name="stage" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GenerateBalanceHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GenerateGlobalBalanceHttpPostIn">
+    <wsdl:part name="currentUser" type="s:string" />
+    <wsdl:part name="key" type="s:string" />
+    <wsdl:part name="log" type="s:string" />
+    <wsdl:part name="sql" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GenerateGlobalBalanceHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetChargeOnDemandHttpPostIn">
+    <wsdl:part name="currentUser" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetChargeOnDemandHttpPostOut">
+    <wsdl:part name="Body" element="tns:int" />
+  </wsdl:message>
+  <wsdl:message name="AssignUserHttpPostIn">
+    <wsdl:part name="currentUser" type="s:string" />
+    <wsdl:part name="form" type="s:string" />
+    <wsdl:part name="user" type="s:string" />
+    <wsdl:part name="app" type="s:string" />
+    <wsdl:part name="stage" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="AssignUserHttpPostOut">
+    <wsdl:part name="Body" element="tns:anyType" />
+  </wsdl:message>
+  <wsdl:message name="EncodeHttpPostIn">
+    <wsdl:part name="value" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="EncodeHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="DecodeHttpPostIn">
+    <wsdl:part name="value" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="DecodeHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="FormGroupHttpPostIn">
+    <wsdl:part name="key" type="s:string" />
+    <wsdl:part name="idFormGroup" type="s:string" />
+    <wsdl:part name="log" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="FormGroupHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="FormGroupMSHttpPostIn">
+    <wsdl:part name="key" type="s:string" />
+    <wsdl:part name="idFormGroup" type="s:string" />
+    <wsdl:part name="log" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="FormGroupMSHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="AcceptStatusHttpPostIn">
+    <wsdl:part name="key" type="s:string" />
+    <wsdl:part name="log" type="s:string" />
+    <wsdl:part name="idStatus" type="s:string" />
+    <wsdl:part name="forced" type="s:string" />
+    <wsdl:part name="reprocess" type="s:string" />
+    <wsdl:part name="comments" type="s:string" />
+    <wsdl:part name="user" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="AcceptStatusHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="AssignDataKeyHttpPostIn">
+    <wsdl:part name="key" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="AssignDataKeyHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="CalculatedFieldsHttpPostIn">
+    <wsdl:part name="customerKey" type="s:string" />
+    <wsdl:part name="log" type="s:string" />
+    <wsdl:part name="processType" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="CalculatedFieldsHttpPostOut">
+    <wsdl:part name="Body" element="tns:boolean" />
+  </wsdl:message>
+  <wsdl:message name="CalculatedFieldsByCodeHttpPostIn">
+    <wsdl:part name="customerKey" type="s:string" />
+    <wsdl:part name="log" type="s:string" />
+    <wsdl:part name="statusCode" type="s:string" />
+    <wsdl:part name="fieldCode" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="CalculatedFieldsByCodeHttpPostOut">
+    <wsdl:part name="Body" element="tns:boolean" />
+  </wsdl:message>
+  <wsdl:message name="AssignedFieldsHttpPostIn">
+    <wsdl:part name="customerKey" type="s:string" />
+    <wsdl:part name="log" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="AssignedFieldsHttpPostOut">
+    <wsdl:part name="Body" element="tns:boolean" />
+  </wsdl:message>
+  <wsdl:message name="AssignedFieldsByCodeHttpPostIn">
+    <wsdl:part name="customerKey" type="s:string" />
+    <wsdl:part name="log" type="s:string" />
+    <wsdl:part name="statusCode" type="s:string" />
+    <wsdl:part name="fieldCode" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="AssignedFieldsByCodeHttpPostOut">
+    <wsdl:part name="Body" element="tns:boolean" />
+  </wsdl:message>
+  <wsdl:message name="MultipleSendingHttpPostIn">
+    <wsdl:part name="key" type="s:string" />
+    <wsdl:part name="ASProgram" type="s:string" />
+    <wsdl:part name="ASLibrary" type="s:string" />
+    <wsdl:part name="user" type="s:string" />
+    <wsdl:part name="log" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="MultipleSendingHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="InterfaceSelectorHttpPostIn">
+    <wsdl:part name="user" type="s:string" />
+    <wsdl:part name="fieldType" type="s:string" />
+    <wsdl:part name="dataKey" type="s:string" />
+    <wsdl:part name="interfaceKey" type="s:string" />
+    <wsdl:part name="log" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="InterfaceSelectorHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="InterfaceSelectorWebHttpPostIn">
+    <wsdl:part name="user" type="s:string" />
+    <wsdl:part name="fieldType" type="s:string" />
+    <wsdl:part name="interfaceKey" type="s:string" />
+    <wsdl:part name="formParameters" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="InterfaceSelectorWebHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="SendTriggerProcessHttpPostIn">
+    <wsdl:part name="customerId" type="s:string" />
+    <wsdl:part name="userId" type="s:string" />
+    <wsdl:part name="overrideGroups" type="s:string" />
+    <wsdl:part name="mode" type="s:string" />
+    <wsdl:part name="language" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="SendTriggerProcessHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="SendTriggerProcessSecHttpPostIn">
+    <wsdl:part name="customerId" type="s:string" />
+    <wsdl:part name="userId" type="s:string" />
+    <wsdl:part name="overrideGroups" type="s:string" />
+    <wsdl:part name="mode" type="s:string" />
+    <wsdl:part name="language" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="SendTriggerProcessSecHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="ProcesarTramaHttpPostIn">
+    <wsdl:part name="trama" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ProcesarTramaHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="CombineHttpPostIn">
+    <wsdl:part name="cnx" type="s:string" />
+    <wsdl:part name="form" type="s:string" />
+    <wsdl:part name="Solicitud" type="s:string" />
+    <wsdl:part name="user" type="s:string" />
+    <wsdl:part name="lang" type="s:string" />
+    <wsdl:part name="template" type="s:string" />
+    <wsdl:part name="seguro" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="CombineHttpPostOut">
+    <wsdl:part name="Body" element="tns:boolean" />
+  </wsdl:message>
+  <wsdl:message name="applyFormatHttpPostIn">
+    <wsdl:part name="fecha" type="s:string" />
+    <wsdl:part name="Formato" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="applyFormatHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="ConvierteNumLetraHttpPostIn">
+    <wsdl:part name="Numero" type="s:string" />
+    <wsdl:part name="Formato" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ConvierteNumLetraHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="fAutomaticGenerationHttpPostIn">
+    <wsdl:part name="cnx" type="s:string" />
+    <wsdl:part name="form" type="s:string" />
+    <wsdl:part name="Solicitud" type="s:string" />
+    <wsdl:part name="user" type="s:string" />
+    <wsdl:part name="lang" type="s:string" />
+    <wsdl:part name="template" type="s:string" />
+    <wsdl:part name="seguro" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="fAutomaticGenerationHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="DecriptaHttpPostIn">
+    <wsdl:part name="CadenaEnc" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="DecriptaHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:portType name="VFServicesSoap">
+    <wsdl:operation name="GenerateBalance">
+      <wsdl:input message="tns:GenerateBalanceSoapIn" />
+      <wsdl:output message="tns:GenerateBalanceSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GenerateGlobalBalance">
+      <wsdl:input message="tns:GenerateGlobalBalanceSoapIn" />
+      <wsdl:output message="tns:GenerateGlobalBalanceSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetChargeOnDemand">
+      <wsdl:input message="tns:GetChargeOnDemandSoapIn" />
+      <wsdl:output message="tns:GetChargeOnDemandSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLastStatus">
+      <wsdl:input message="tns:GetLastStatusSoapIn" />
+      <wsdl:output message="tns:GetLastStatusSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAssignUsers">
+      <wsdl:input message="tns:GetAssignUsersSoapIn" />
+      <wsdl:output message="tns:GetAssignUsersSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetBalancedUser">
+      <wsdl:input message="tns:GetBalancedUserSoapIn" />
+      <wsdl:output message="tns:GetBalancedUserSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AssignUser">
+      <wsdl:input message="tns:AssignUserSoapIn" />
+      <wsdl:output message="tns:AssignUserSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Encode">
+      <wsdl:input message="tns:EncodeSoapIn" />
+      <wsdl:output message="tns:EncodeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Decode">
+      <wsdl:input message="tns:DecodeSoapIn" />
+      <wsdl:output message="tns:DecodeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="FormGroup">
+      <wsdl:input message="tns:FormGroupSoapIn" />
+      <wsdl:output message="tns:FormGroupSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="FormGroupMS">
+      <wsdl:input message="tns:FormGroupMSSoapIn" />
+      <wsdl:output message="tns:FormGroupMSSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AcceptStatus">
+      <wsdl:input message="tns:AcceptStatusSoapIn" />
+      <wsdl:output message="tns:AcceptStatusSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AssignDataKey">
+      <wsdl:input message="tns:AssignDataKeySoapIn" />
+      <wsdl:output message="tns:AssignDataKeySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CalculatedFields">
+      <wsdl:input message="tns:CalculatedFieldsSoapIn" />
+      <wsdl:output message="tns:CalculatedFieldsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CalculatedFieldsByCode">
+      <wsdl:input message="tns:CalculatedFieldsByCodeSoapIn" />
+      <wsdl:output message="tns:CalculatedFieldsByCodeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AssignedFields">
+      <wsdl:input message="tns:AssignedFieldsSoapIn" />
+      <wsdl:output message="tns:AssignedFieldsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AssignedFieldsByCode">
+      <wsdl:input message="tns:AssignedFieldsByCodeSoapIn" />
+      <wsdl:output message="tns:AssignedFieldsByCodeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="MultipleSending">
+      <wsdl:input message="tns:MultipleSendingSoapIn" />
+      <wsdl:output message="tns:MultipleSendingSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="InterfaceSelector">
+      <wsdl:input message="tns:InterfaceSelectorSoapIn" />
+      <wsdl:output message="tns:InterfaceSelectorSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="InterfaceSelectorWeb">
+      <wsdl:input message="tns:InterfaceSelectorWebSoapIn" />
+      <wsdl:output message="tns:InterfaceSelectorWebSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SendTriggerProcess">
+      <wsdl:input message="tns:SendTriggerProcessSoapIn" />
+      <wsdl:output message="tns:SendTriggerProcessSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SendTriggerProcessSec">
+      <wsdl:input message="tns:SendTriggerProcessSecSoapIn" />
+      <wsdl:output message="tns:SendTriggerProcessSecSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ProcesarTrama">
+      <wsdl:input message="tns:ProcesarTramaSoapIn" />
+      <wsdl:output message="tns:ProcesarTramaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Combine">
+      <wsdl:input message="tns:CombineSoapIn" />
+      <wsdl:output message="tns:CombineSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="applyFormat">
+      <wsdl:input message="tns:applyFormatSoapIn" />
+      <wsdl:output message="tns:applyFormatSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ConvierteNumLetra">
+      <wsdl:input message="tns:ConvierteNumLetraSoapIn" />
+      <wsdl:output message="tns:ConvierteNumLetraSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="fAutomaticGeneration">
+      <wsdl:input message="tns:fAutomaticGenerationSoapIn" />
+      <wsdl:output message="tns:fAutomaticGenerationSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Decripta">
+      <wsdl:input message="tns:DecriptaSoapIn" />
+      <wsdl:output message="tns:DecriptaSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="VFServicesHttpGet">
+    <wsdl:operation name="GenerateBalance">
+      <wsdl:input message="tns:GenerateBalanceHttpGetIn" />
+      <wsdl:output message="tns:GenerateBalanceHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GenerateGlobalBalance">
+      <wsdl:input message="tns:GenerateGlobalBalanceHttpGetIn" />
+      <wsdl:output message="tns:GenerateGlobalBalanceHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetChargeOnDemand">
+      <wsdl:input message="tns:GetChargeOnDemandHttpGetIn" />
+      <wsdl:output message="tns:GetChargeOnDemandHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AssignUser">
+      <wsdl:input message="tns:AssignUserHttpGetIn" />
+      <wsdl:output message="tns:AssignUserHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Encode">
+      <wsdl:input message="tns:EncodeHttpGetIn" />
+      <wsdl:output message="tns:EncodeHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Decode">
+      <wsdl:input message="tns:DecodeHttpGetIn" />
+      <wsdl:output message="tns:DecodeHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="FormGroup">
+      <wsdl:input message="tns:FormGroupHttpGetIn" />
+      <wsdl:output message="tns:FormGroupHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="FormGroupMS">
+      <wsdl:input message="tns:FormGroupMSHttpGetIn" />
+      <wsdl:output message="tns:FormGroupMSHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AcceptStatus">
+      <wsdl:input message="tns:AcceptStatusHttpGetIn" />
+      <wsdl:output message="tns:AcceptStatusHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AssignDataKey">
+      <wsdl:input message="tns:AssignDataKeyHttpGetIn" />
+      <wsdl:output message="tns:AssignDataKeyHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CalculatedFields">
+      <wsdl:input message="tns:CalculatedFieldsHttpGetIn" />
+      <wsdl:output message="tns:CalculatedFieldsHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CalculatedFieldsByCode">
+      <wsdl:input message="tns:CalculatedFieldsByCodeHttpGetIn" />
+      <wsdl:output message="tns:CalculatedFieldsByCodeHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AssignedFields">
+      <wsdl:input message="tns:AssignedFieldsHttpGetIn" />
+      <wsdl:output message="tns:AssignedFieldsHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AssignedFieldsByCode">
+      <wsdl:input message="tns:AssignedFieldsByCodeHttpGetIn" />
+      <wsdl:output message="tns:AssignedFieldsByCodeHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="MultipleSending">
+      <wsdl:input message="tns:MultipleSendingHttpGetIn" />
+      <wsdl:output message="tns:MultipleSendingHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="InterfaceSelector">
+      <wsdl:input message="tns:InterfaceSelectorHttpGetIn" />
+      <wsdl:output message="tns:InterfaceSelectorHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="InterfaceSelectorWeb">
+      <wsdl:input message="tns:InterfaceSelectorWebHttpGetIn" />
+      <wsdl:output message="tns:InterfaceSelectorWebHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SendTriggerProcess">
+      <wsdl:input message="tns:SendTriggerProcessHttpGetIn" />
+      <wsdl:output message="tns:SendTriggerProcessHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SendTriggerProcessSec">
+      <wsdl:input message="tns:SendTriggerProcessSecHttpGetIn" />
+      <wsdl:output message="tns:SendTriggerProcessSecHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ProcesarTrama">
+      <wsdl:input message="tns:ProcesarTramaHttpGetIn" />
+      <wsdl:output message="tns:ProcesarTramaHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Combine">
+      <wsdl:input message="tns:CombineHttpGetIn" />
+      <wsdl:output message="tns:CombineHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="applyFormat">
+      <wsdl:input message="tns:applyFormatHttpGetIn" />
+      <wsdl:output message="tns:applyFormatHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ConvierteNumLetra">
+      <wsdl:input message="tns:ConvierteNumLetraHttpGetIn" />
+      <wsdl:output message="tns:ConvierteNumLetraHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="fAutomaticGeneration">
+      <wsdl:input message="tns:fAutomaticGenerationHttpGetIn" />
+      <wsdl:output message="tns:fAutomaticGenerationHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Decripta">
+      <wsdl:input message="tns:DecriptaHttpGetIn" />
+      <wsdl:output message="tns:DecriptaHttpGetOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="VFServicesHttpPost">
+    <wsdl:operation name="GenerateBalance">
+      <wsdl:input message="tns:GenerateBalanceHttpPostIn" />
+      <wsdl:output message="tns:GenerateBalanceHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GenerateGlobalBalance">
+      <wsdl:input message="tns:GenerateGlobalBalanceHttpPostIn" />
+      <wsdl:output message="tns:GenerateGlobalBalanceHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetChargeOnDemand">
+      <wsdl:input message="tns:GetChargeOnDemandHttpPostIn" />
+      <wsdl:output message="tns:GetChargeOnDemandHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AssignUser">
+      <wsdl:input message="tns:AssignUserHttpPostIn" />
+      <wsdl:output message="tns:AssignUserHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Encode">
+      <wsdl:input message="tns:EncodeHttpPostIn" />
+      <wsdl:output message="tns:EncodeHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Decode">
+      <wsdl:input message="tns:DecodeHttpPostIn" />
+      <wsdl:output message="tns:DecodeHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="FormGroup">
+      <wsdl:input message="tns:FormGroupHttpPostIn" />
+      <wsdl:output message="tns:FormGroupHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="FormGroupMS">
+      <wsdl:input message="tns:FormGroupMSHttpPostIn" />
+      <wsdl:output message="tns:FormGroupMSHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AcceptStatus">
+      <wsdl:input message="tns:AcceptStatusHttpPostIn" />
+      <wsdl:output message="tns:AcceptStatusHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AssignDataKey">
+      <wsdl:input message="tns:AssignDataKeyHttpPostIn" />
+      <wsdl:output message="tns:AssignDataKeyHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CalculatedFields">
+      <wsdl:input message="tns:CalculatedFieldsHttpPostIn" />
+      <wsdl:output message="tns:CalculatedFieldsHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CalculatedFieldsByCode">
+      <wsdl:input message="tns:CalculatedFieldsByCodeHttpPostIn" />
+      <wsdl:output message="tns:CalculatedFieldsByCodeHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AssignedFields">
+      <wsdl:input message="tns:AssignedFieldsHttpPostIn" />
+      <wsdl:output message="tns:AssignedFieldsHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AssignedFieldsByCode">
+      <wsdl:input message="tns:AssignedFieldsByCodeHttpPostIn" />
+      <wsdl:output message="tns:AssignedFieldsByCodeHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="MultipleSending">
+      <wsdl:input message="tns:MultipleSendingHttpPostIn" />
+      <wsdl:output message="tns:MultipleSendingHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="InterfaceSelector">
+      <wsdl:input message="tns:InterfaceSelectorHttpPostIn" />
+      <wsdl:output message="tns:InterfaceSelectorHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="InterfaceSelectorWeb">
+      <wsdl:input message="tns:InterfaceSelectorWebHttpPostIn" />
+      <wsdl:output message="tns:InterfaceSelectorWebHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SendTriggerProcess">
+      <wsdl:input message="tns:SendTriggerProcessHttpPostIn" />
+      <wsdl:output message="tns:SendTriggerProcessHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SendTriggerProcessSec">
+      <wsdl:input message="tns:SendTriggerProcessSecHttpPostIn" />
+      <wsdl:output message="tns:SendTriggerProcessSecHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ProcesarTrama">
+      <wsdl:input message="tns:ProcesarTramaHttpPostIn" />
+      <wsdl:output message="tns:ProcesarTramaHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Combine">
+      <wsdl:input message="tns:CombineHttpPostIn" />
+      <wsdl:output message="tns:CombineHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="applyFormat">
+      <wsdl:input message="tns:applyFormatHttpPostIn" />
+      <wsdl:output message="tns:applyFormatHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ConvierteNumLetra">
+      <wsdl:input message="tns:ConvierteNumLetraHttpPostIn" />
+      <wsdl:output message="tns:ConvierteNumLetraHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="fAutomaticGeneration">
+      <wsdl:input message="tns:fAutomaticGenerationHttpPostIn" />
+      <wsdl:output message="tns:fAutomaticGenerationHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Decripta">
+      <wsdl:input message="tns:DecriptaHttpPostIn" />
+      <wsdl:output message="tns:DecriptaHttpPostOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="VFServicesSoap" type="tns:VFServicesSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GenerateBalance">
+      <soap:operation soapAction="http://tempuri.org/GenerateBalance" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GenerateGlobalBalance">
+      <soap:operation soapAction="http://tempuri.org/GenerateGlobalBalance" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetChargeOnDemand">
+      <soap:operation soapAction="http://tempuri.org/GetChargeOnDemand" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLastStatus">
+      <soap:operation soapAction="http://tempuri.org/GetLastStatus" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAssignUsers">
+      <soap:operation soapAction="http://tempuri.org/GetAssignUsers" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetBalancedUser">
+      <soap:operation soapAction="http://tempuri.org/GetBalancedUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AssignUser">
+      <soap:operation soapAction="http://tempuri.org/AssignUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Encode">
+      <soap:operation soapAction="http://tempuri.org/Encode" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Decode">
+      <soap:operation soapAction="http://tempuri.org/Decode" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FormGroup">
+      <soap:operation soapAction="http://tempuri.org/FormGroup" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FormGroupMS">
+      <soap:operation soapAction="http://tempuri.org/FormGroupMS" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AcceptStatus">
+      <soap:operation soapAction="http://tempuri.org/AcceptStatus" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AssignDataKey">
+      <soap:operation soapAction="http://tempuri.org/AssignDataKey" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CalculatedFields">
+      <soap:operation soapAction="http://tempuri.org/CalculatedFields" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CalculatedFieldsByCode">
+      <soap:operation soapAction="http://tempuri.org/CalculatedFieldsByCode" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AssignedFields">
+      <soap:operation soapAction="http://tempuri.org/AssignedFields" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AssignedFieldsByCode">
+      <soap:operation soapAction="http://tempuri.org/AssignedFieldsByCode" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MultipleSending">
+      <soap:operation soapAction="http://tempuri.org/MultipleSending" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InterfaceSelector">
+      <soap:operation soapAction="http://tempuri.org/InterfaceSelector" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InterfaceSelectorWeb">
+      <soap:operation soapAction="http://tempuri.org/InterfaceSelectorWeb" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendTriggerProcess">
+      <soap:operation soapAction="http://tempuri.org/SendTriggerProcess" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendTriggerProcessSec">
+      <soap:operation soapAction="http://tempuri.org/SendTriggerProcessSec" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ProcesarTrama">
+      <soap:operation soapAction="http://tempuri.org/ProcesarTrama" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Combine">
+      <soap:operation soapAction="http://tempuri.org/Combine" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="applyFormat">
+      <soap:operation soapAction="http://tempuri.org/applyFormat" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConvierteNumLetra">
+      <soap:operation soapAction="http://tempuri.org/ConvierteNumLetra" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="fAutomaticGeneration">
+      <soap:operation soapAction="http://tempuri.org/fAutomaticGeneration" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Decripta">
+      <soap:operation soapAction="http://tempuri.org/Decripta" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="VFServicesSoap12" type="tns:VFServicesSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GenerateBalance">
+      <soap12:operation soapAction="http://tempuri.org/GenerateBalance" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GenerateGlobalBalance">
+      <soap12:operation soapAction="http://tempuri.org/GenerateGlobalBalance" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetChargeOnDemand">
+      <soap12:operation soapAction="http://tempuri.org/GetChargeOnDemand" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLastStatus">
+      <soap12:operation soapAction="http://tempuri.org/GetLastStatus" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAssignUsers">
+      <soap12:operation soapAction="http://tempuri.org/GetAssignUsers" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetBalancedUser">
+      <soap12:operation soapAction="http://tempuri.org/GetBalancedUser" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AssignUser">
+      <soap12:operation soapAction="http://tempuri.org/AssignUser" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Encode">
+      <soap12:operation soapAction="http://tempuri.org/Encode" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Decode">
+      <soap12:operation soapAction="http://tempuri.org/Decode" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FormGroup">
+      <soap12:operation soapAction="http://tempuri.org/FormGroup" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FormGroupMS">
+      <soap12:operation soapAction="http://tempuri.org/FormGroupMS" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AcceptStatus">
+      <soap12:operation soapAction="http://tempuri.org/AcceptStatus" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AssignDataKey">
+      <soap12:operation soapAction="http://tempuri.org/AssignDataKey" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CalculatedFields">
+      <soap12:operation soapAction="http://tempuri.org/CalculatedFields" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CalculatedFieldsByCode">
+      <soap12:operation soapAction="http://tempuri.org/CalculatedFieldsByCode" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AssignedFields">
+      <soap12:operation soapAction="http://tempuri.org/AssignedFields" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AssignedFieldsByCode">
+      <soap12:operation soapAction="http://tempuri.org/AssignedFieldsByCode" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MultipleSending">
+      <soap12:operation soapAction="http://tempuri.org/MultipleSending" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InterfaceSelector">
+      <soap12:operation soapAction="http://tempuri.org/InterfaceSelector" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InterfaceSelectorWeb">
+      <soap12:operation soapAction="http://tempuri.org/InterfaceSelectorWeb" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendTriggerProcess">
+      <soap12:operation soapAction="http://tempuri.org/SendTriggerProcess" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendTriggerProcessSec">
+      <soap12:operation soapAction="http://tempuri.org/SendTriggerProcessSec" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ProcesarTrama">
+      <soap12:operation soapAction="http://tempuri.org/ProcesarTrama" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Combine">
+      <soap12:operation soapAction="http://tempuri.org/Combine" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="applyFormat">
+      <soap12:operation soapAction="http://tempuri.org/applyFormat" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConvierteNumLetra">
+      <soap12:operation soapAction="http://tempuri.org/ConvierteNumLetra" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="fAutomaticGeneration">
+      <soap12:operation soapAction="http://tempuri.org/fAutomaticGeneration" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Decripta">
+      <soap12:operation soapAction="http://tempuri.org/Decripta" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="VFServicesHttpGet" type="tns:VFServicesHttpGet">
+    <http:binding verb="GET" />
+    <wsdl:operation name="GenerateBalance">
+      <http:operation location="/GenerateBalance" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GenerateGlobalBalance">
+      <http:operation location="/GenerateGlobalBalance" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetChargeOnDemand">
+      <http:operation location="/GetChargeOnDemand" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AssignUser">
+      <http:operation location="/AssignUser" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Encode">
+      <http:operation location="/Encode" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Decode">
+      <http:operation location="/Decode" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FormGroup">
+      <http:operation location="/FormGroup" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FormGroupMS">
+      <http:operation location="/FormGroupMS" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AcceptStatus">
+      <http:operation location="/AcceptStatus" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AssignDataKey">
+      <http:operation location="/AssignDataKey" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CalculatedFields">
+      <http:operation location="/CalculatedFields" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CalculatedFieldsByCode">
+      <http:operation location="/CalculatedFieldsByCode" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AssignedFields">
+      <http:operation location="/AssignedFields" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AssignedFieldsByCode">
+      <http:operation location="/AssignedFieldsByCode" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MultipleSending">
+      <http:operation location="/MultipleSending" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InterfaceSelector">
+      <http:operation location="/InterfaceSelector" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InterfaceSelectorWeb">
+      <http:operation location="/InterfaceSelectorWeb" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendTriggerProcess">
+      <http:operation location="/SendTriggerProcess" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendTriggerProcessSec">
+      <http:operation location="/SendTriggerProcessSec" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ProcesarTrama">
+      <http:operation location="/ProcesarTrama" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Combine">
+      <http:operation location="/Combine" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="applyFormat">
+      <http:operation location="/applyFormat" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConvierteNumLetra">
+      <http:operation location="/ConvierteNumLetra" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="fAutomaticGeneration">
+      <http:operation location="/fAutomaticGeneration" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Decripta">
+      <http:operation location="/Decripta" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="VFServicesHttpPost" type="tns:VFServicesHttpPost">
+    <http:binding verb="POST" />
+    <wsdl:operation name="GenerateBalance">
+      <http:operation location="/GenerateBalance" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GenerateGlobalBalance">
+      <http:operation location="/GenerateGlobalBalance" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetChargeOnDemand">
+      <http:operation location="/GetChargeOnDemand" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AssignUser">
+      <http:operation location="/AssignUser" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Encode">
+      <http:operation location="/Encode" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Decode">
+      <http:operation location="/Decode" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FormGroup">
+      <http:operation location="/FormGroup" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FormGroupMS">
+      <http:operation location="/FormGroupMS" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AcceptStatus">
+      <http:operation location="/AcceptStatus" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AssignDataKey">
+      <http:operation location="/AssignDataKey" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CalculatedFields">
+      <http:operation location="/CalculatedFields" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CalculatedFieldsByCode">
+      <http:operation location="/CalculatedFieldsByCode" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AssignedFields">
+      <http:operation location="/AssignedFields" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AssignedFieldsByCode">
+      <http:operation location="/AssignedFieldsByCode" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MultipleSending">
+      <http:operation location="/MultipleSending" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InterfaceSelector">
+      <http:operation location="/InterfaceSelector" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InterfaceSelectorWeb">
+      <http:operation location="/InterfaceSelectorWeb" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendTriggerProcess">
+      <http:operation location="/SendTriggerProcess" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendTriggerProcessSec">
+      <http:operation location="/SendTriggerProcessSec" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ProcesarTrama">
+      <http:operation location="/ProcesarTrama" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Combine">
+      <http:operation location="/Combine" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="applyFormat">
+      <http:operation location="/applyFormat" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConvierteNumLetra">
+      <http:operation location="/ConvierteNumLetra" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="fAutomaticGeneration">
+      <http:operation location="/fAutomaticGeneration" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Decripta">
+      <http:operation location="/Decripta" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="VFServices">
+    <wsdl:port name="VFServicesSoap" binding="tns:VFServicesSoap">
+      <soap:address location="http://192.168.7.9/ServicioWebVF/VFServices.asmx" />
+    </wsdl:port>
+    <wsdl:port name="VFServicesSoap12" binding="tns:VFServicesSoap12">
+      <soap12:address location="http://192.168.7.9/ServicioWebVF/VFServices.asmx" />
+    </wsdl:port>
+    <wsdl:port name="VFServicesHttpGet" binding="tns:VFServicesHttpGet">
+      <http:address location="http://192.168.7.9/ServicioWebVF/VFServices.asmx" />
+    </wsdl:port>
+    <wsdl:port name="VFServicesHttpPost" binding="tns:VFServicesHttpPost">
+      <http:address location="http://192.168.7.9/ServicioWebVF/VFServices.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

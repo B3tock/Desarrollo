@@ -1,0 +1,19 @@
+C:\_Practicas\Net\AppConsolidaArchivos\AppConsolidaArchivos\bin\Debug\AppConsolidaArchivos.exe.config
+C:\_Practicas\Net\AppConsolidaArchivos\AppConsolidaArchivos\bin\Debug\AppConsolidaArchivos.exe
+C:\_Practicas\Net\AppConsolidaArchivos\AppConsolidaArchivos\bin\Debug\AppConsolidaArchivos.pdb
+C:\_Practicas\Net\AppConsolidaArchivos\AppConsolidaArchivos\bin\Debug\BancoPinchincha.Canales.Bmp.Consolidacion.dll
+C:\_Practicas\Net\AppConsolidaArchivos\AppConsolidaArchivos\bin\Debug\BancoPinchincha.Canales.Bmp.Consolidacion.pdb
+C:\_Practicas\Net\AppConsolidaArchivos\AppConsolidaArchivos\obj\x86\Debug\AppConsolidaArchivos.csprojResolveAssemblyReference.cache
+C:\_Practicas\Net\AppConsolidaArchivos\AppConsolidaArchivos\obj\x86\Debug\AppConsolidaArchivos.exe
+C:\_Practicas\Net\AppConsolidaArchivos\AppConsolidaArchivos\obj\x86\Debug\AppConsolidaArchivos.pdb
+C:\Users\fredel507\Documents\Visual Studio 2010\Projects\AppConsolidaArchivos\AppConsolidaArchivos\bin\Debug\AppConsolidaArchivos.exe.config
+C:\Users\fredel507\Documents\Visual Studio 2010\Projects\AppConsolidaArchivos\AppConsolidaArchivos\obj\x86\Debug\AppConsolidaArchivos.exe
+C:\Users\fredel507\Documents\Visual Studio 2010\Projects\AppConsolidaArchivos\AppConsolidaArchivos\obj\x86\Debug\AppConsolidaArchivos.pdb
+C:\Users\fredel507\Documents\Visual Studio 2010\Projects\AppConsolidaArchivos\AppConsolidaArchivos\bin\Debug\AppConsolidaArchivos.exe
+C:\Users\fredel507\Documents\Visual Studio 2010\Projects\AppConsolidaArchivos\AppConsolidaArchivos\bin\Debug\AppConsolidaArchivos.pdb
+C:\Users\fredel507\Documents\Visual Studio 2010\Projects\AppConsolidaArchivos\AppConsolidaArchivos\bin\Debug\BancoPinchincha.Canales.Bmp.Consolidacion.dll
+C:\Users\fredel507\Documents\Visual Studio 2010\Projects\AppConsolidaArchivos\AppConsolidaArchivos\bin\Debug\BancoPinchincha.Canales.Bmp.Consolidacion.pdb
+C:\Users\fredel507\Documents\Visual Studio 2010\Projects\AppConsolidaArchivos\AppConsolidaArchivos\obj\x86\Debug\AppConsolidaArchivos.csprojResolveAssemblyReference.cache
+C:\Users\albalg741\Documents\Aplicaciones\AppConsolidaArchivos\AppConsolidaArchivos\bin\Debug\AppConsolidaArchivos.exe.config
+C:\Users\albalg741\Documents\Aplicaciones\AppConsolidaArchivos\AppConsolidaArchivos\obj\x86\Debug\AppConsolidaArchivos.exe
+C:\Users\albalg741\Documents\Aplicaciones\AppConsolidaArchivos\AppConsolidaArchivos\obj\x86\Debug\AppConsolidaArchivos.pdb

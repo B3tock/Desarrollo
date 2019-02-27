@@ -1,0 +1,40 @@
+D:\samuel\portafolio\Portafolio\Pichincha\Pichincha.Modelo\bin\Debug\Pichincha.Modelo.dll
+D:\samuel\portafolio\Portafolio\Pichincha\Pichincha.Modelo\bin\Debug\Pichincha.Modelo.pdb
+D:\samuel\portafolio\Portafolio\Pichincha\Pichincha.Modelo\bin\Debug\Pichincha.Modelo.xml
+D:\samuel\portafolio\Portafolio\Pichincha\Pichincha.Modelo\obj\Debug\Pichincha.Modelo.Resources.resources
+D:\samuel\portafolio\Portafolio\Pichincha\Pichincha.Modelo\obj\Debug\Pichincha.Modelo.vbproj.GenerateResource.Cache
+D:\samuel\portafolio\Portafolio\Pichincha\Pichincha.Modelo\obj\Debug\Pichincha.Modelo.dll
+D:\samuel\portafolio\Portafolio\Pichincha\Pichincha.Modelo\obj\Debug\Pichincha.Modelo.xml
+D:\samuel\portafolio\Portafolio\Pichincha\Pichincha.Modelo\obj\Debug\Pichincha.Modelo.pdb
+D:\samuel\trabajo\portafolio\Portafolio\Pichincha\Pichincha.Modelo\bin\Debug\Pichincha.Modelo.dll
+D:\samuel\trabajo\portafolio\Portafolio\Pichincha\Pichincha.Modelo\bin\Debug\Pichincha.Modelo.pdb
+D:\samuel\trabajo\portafolio\Portafolio\Pichincha\Pichincha.Modelo\bin\Debug\Pichincha.Modelo.xml
+D:\samuel\trabajo\portafolio\Portafolio\Pichincha\Pichincha.Modelo\obj\Debug\Pichincha.Modelo.Resources.resources
+D:\samuel\trabajo\portafolio\Portafolio\Pichincha\Pichincha.Modelo\obj\Debug\Pichincha.Modelo.vbproj.GenerateResource.Cache
+D:\samuel\trabajo\portafolio\Portafolio\Pichincha\Pichincha.Modelo\obj\Debug\Pichincha.Modelo.dll
+D:\samuel\trabajo\portafolio\Portafolio\Pichincha\Pichincha.Modelo\obj\Debug\Pichincha.Modelo.xml
+D:\samuel\trabajo\portafolio\Portafolio\Pichincha\Pichincha.Modelo\obj\Debug\Pichincha.Modelo.pdb
+D:\samuel\VERSIONES APLICATIVOS\20150923\portafolio\Portafolio\Pichincha\Pichincha.Modelo\bin\Debug\Pichincha.Modelo.dll
+D:\samuel\VERSIONES APLICATIVOS\20150923\portafolio\Portafolio\Pichincha\Pichincha.Modelo\bin\Debug\Pichincha.Modelo.pdb
+D:\samuel\VERSIONES APLICATIVOS\20150923\portafolio\Portafolio\Pichincha\Pichincha.Modelo\bin\Debug\Pichincha.Modelo.xml
+D:\samuel\VERSIONES APLICATIVOS\20150923\portafolio\Portafolio\Pichincha\Pichincha.Modelo\obj\Debug\Pichincha.Modelo.Resources.resources
+D:\samuel\VERSIONES APLICATIVOS\20150923\portafolio\Portafolio\Pichincha\Pichincha.Modelo\obj\Debug\Pichincha.Modelo.vbproj.GenerateResource.Cache
+D:\samuel\VERSIONES APLICATIVOS\20150923\portafolio\Portafolio\Pichincha\Pichincha.Modelo\obj\Debug\Pichincha.Modelo.dll
+D:\samuel\VERSIONES APLICATIVOS\20150923\portafolio\Portafolio\Pichincha\Pichincha.Modelo\obj\Debug\Pichincha.Modelo.xml
+D:\samuel\VERSIONES APLICATIVOS\20150923\portafolio\Portafolio\Pichincha\Pichincha.Modelo\obj\Debug\Pichincha.Modelo.pdb
+D:\SAMUEL\VERSIONES APLICATIVOS\2016\FEBRERO\portafolio\portafolio\Portafolio\Pichincha\Pichincha.Modelo\bin\Debug\Pichincha.Modelo.dll
+D:\SAMUEL\VERSIONES APLICATIVOS\2016\FEBRERO\portafolio\portafolio\Portafolio\Pichincha\Pichincha.Modelo\bin\Debug\Pichincha.Modelo.pdb
+D:\SAMUEL\VERSIONES APLICATIVOS\2016\FEBRERO\portafolio\portafolio\Portafolio\Pichincha\Pichincha.Modelo\bin\Debug\Pichincha.Modelo.xml
+D:\SAMUEL\VERSIONES APLICATIVOS\2016\FEBRERO\portafolio\portafolio\Portafolio\Pichincha\Pichincha.Modelo\obj\Debug\Pichincha.Modelo.Resources.resources
+D:\SAMUEL\VERSIONES APLICATIVOS\2016\FEBRERO\portafolio\portafolio\Portafolio\Pichincha\Pichincha.Modelo\obj\Debug\Pichincha.Modelo.vbproj.GenerateResource.Cache
+D:\SAMUEL\VERSIONES APLICATIVOS\2016\FEBRERO\portafolio\portafolio\Portafolio\Pichincha\Pichincha.Modelo\obj\Debug\Pichincha.Modelo.dll
+D:\SAMUEL\VERSIONES APLICATIVOS\2016\FEBRERO\portafolio\portafolio\Portafolio\Pichincha\Pichincha.Modelo\obj\Debug\Pichincha.Modelo.xml
+D:\SAMUEL\VERSIONES APLICATIVOS\2016\FEBRERO\portafolio\portafolio\Portafolio\Pichincha\Pichincha.Modelo\obj\Debug\Pichincha.Modelo.pdb
+D:\Proyectos WEB\Pichincha\Portafolio\Portafolio\Pichincha.Modelo\bin\Debug\Pichincha.Modelo.dll
+D:\Proyectos WEB\Pichincha\Portafolio\Portafolio\Pichincha.Modelo\bin\Debug\Pichincha.Modelo.pdb
+D:\Proyectos WEB\Pichincha\Portafolio\Portafolio\Pichincha.Modelo\bin\Debug\Pichincha.Modelo.xml
+D:\Proyectos WEB\Pichincha\Portafolio\Portafolio\Pichincha.Modelo\obj\Debug\Pichincha.Modelo.Resources.resources
+D:\Proyectos WEB\Pichincha\Portafolio\Portafolio\Pichincha.Modelo\obj\Debug\Pichincha.Modelo.vbproj.GenerateResource.Cache
+D:\Proyectos WEB\Pichincha\Portafolio\Portafolio\Pichincha.Modelo\obj\Debug\Pichincha.Modelo.dll
+D:\Proyectos WEB\Pichincha\Portafolio\Portafolio\Pichincha.Modelo\obj\Debug\Pichincha.Modelo.xml
+D:\Proyectos WEB\Pichincha\Portafolio\Portafolio\Pichincha.Modelo\obj\Debug\Pichincha.Modelo.pdb
